@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_Title_Personal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_title"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="Personal"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/imgPeople"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/people" />
+
+            <TextView
+                android:id="@+id/lblFn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/imgPeople"
+                android:gravity="center_vertical"
+                android:text="@string/first_name"
+                android:textColor="#372c24"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edtFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/lblFn"
+                android:background="@drawable/edit_text_bg"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/lblLn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtFirstName"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/imgPeople"
+                android:gravity="center_vertical"
+                android:text="@string/last_name"
+                android:textColor="#372c24"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edtLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/edtFirstName"
+                android:layout_below="@id/edtFirstName"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/lblLn"
+                android:background="@drawable/edit_text_bg"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@android:color/black" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/imgLoc"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/location" />
+
+            <TextView
+                android:id="@+id/lblAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/imgLoc"
+                android:gravity="center_vertical"
+                android:text="@string/address"
+                android:textColor="#372c24"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/lblStreet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/edtAddress"
+                android:layout_below="@id/lblAdd"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/imgLoc"
+                android:gravity="center_vertical"
+                android:text="Street: "
+                android:textColor="#372c24"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edtAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/edtZipCode"
+                android:layout_below="@id/lblAdd"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/lblStreet"
+                android:background="@drawable/edit_text_bg"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/viewStreet"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignLeft="@id/lblStreet"
+                android:layout_below="@id/edtAddress"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/lblCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/edtCity"
+                android:layout_alignLeft="@id/viewStreet"
+                android:layout_below="@id/viewStreet"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/city"
+                android:textColor="#372c24"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edtCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/edtZipCode"
+                android:layout_below="@id/viewStreet"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/lblCity"
+                android:background="@drawable/edit_text_bg"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/viewCity"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignLeft="@id/viewStreet"
+                android:layout_below="@id/edtCity"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/lblstate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/edtState"
+                android:layout_alignLeft="@id/viewCity"
+                android:layout_below="@id/viewCity"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/state"
+                android:textColor="#372c24"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edtState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/edtZipCode"
+                android:layout_below="@id/viewCity"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/lblstate"
+                android:background="@drawable/edit_text_bg"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/viewstate"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignLeft="@id/viewStreet"
+                android:layout_below="@id/edtState"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/lblzipcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/edtZipCode"
+                android:layout_alignLeft="@id/viewstate"
+                android:layout_below="@id/viewstate"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/zip_code"
+                android:textColor="#372c24"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edtZipCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewstate"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/lblzipcode"
+                android:background="@drawable/edit_text_bg"
+                android:inputType="number"
+                android:maxLength="6"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/viewZipCode"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignLeft="@id/viewStreet"
+                android:layout_below="@id/edtZipCode"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/black" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/viewZipCode"
+
+
+                android:layout_below="@id/viewZipCode">
+
+                <TextView
+                    android:id="@+id/lblCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/country"
+                    android:textColor="#372c24"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/spCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/lblCountry" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/icon_btn_next"
+            android:gravity="right|center_vertical"
+            android:text="Next"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    app:layout_constraintCircleRadius="5dp"
+    android:layout_marginTop="5dp"
+    android:elevation="2dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:background="#fefefe"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="7dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/lv_dash_img"
+                android:layout_width="115dp"
+                android:layout_height="90dp"
+                android:layout_margin="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_margin="5dp"
+                android:id="@+id/lv_dash_con"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/divider6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            />
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="5dp"-->
+<!--            android:background="#ffffff"-->
+<!--            android:orientation="vertical"></LinearLayout>-->
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.05"
+        android:background="#F89106"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/btnclick"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.1"
+            android:background="@drawable/selector_button"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Click Here"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="to add a new case"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1.5"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <!-- Cases Recently Answer-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/roundrect"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/dashimg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/recently" />
+
+                <TextView
+                    android:id="@+id/txt_recentlyanswer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/home_grid_margin_top"
+                    android:layout_toRightOf="@+id/dashimg1"
+                    android:text="0"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/home_grid_margin_top"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:text="Recently Answer Case"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+        <!-- Cases Recently Answer End-->
+
+        <!-- Recently Pending Cases-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/roundrect"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/dashimg2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/recently" />
+
+                <TextView
+                    android:id="@+id/txt_recentlypending"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/home_grid_margin_top"
+                    android:layout_toRightOf="@+id/dashimg2"
+                    android:text="0"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textSize="12sp"
+                android:layout_marginTop="@dimen/home_grid_margin_top"
+                android:gravity="center_horizontal"
+                android:text="Recently Pending Case"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+        <!-- Recently Pending Cases -->
+        <!-- Recently Current Cases-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/roundrect"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/recently" />
+
+                <TextView
+                    android:id="@+id/txt_allticketcount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/home_grid_margin_top"
+                    android:text="0"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/home_grid_margin_top"
+                android:layout_gravity="center_horizontal"
+                android:textSize="12sp"
+                android:text="All Ticket Count"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+        <!-- Recently Pending Cases -->
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_recent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_title"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="Recently Answer"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <ListView
+        android:id="@+id/lst_recent_case"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.5"></ListView>
+    <!--<android.support.v4.view.ViewPager
+        android:id="@+id/recent_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"/>-->
+
+    <TextView
+        android:id="@+id/txt_Pending"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/pending"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="Pending Cases"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <ListView
+        android:id="@+id/lst_pending_cases"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.5"></ListView>
+    <!--
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pending_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="10dp"/>-->
+
+</LinearLayout>
